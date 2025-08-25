@@ -20,7 +20,7 @@ export default function Page() {
     const redirectUri = encodeURIComponent(
       `${window.location.origin}/api/auth/strava/callback`
     );
-    const scope = "read,activity:read";
+    const scope = "activity:read_all,activity:write";
 
     const stravaAuthUrl = `https://www.strava.com/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
 

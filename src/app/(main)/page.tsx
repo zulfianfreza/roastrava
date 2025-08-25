@@ -18,8 +18,7 @@ export default function Page() {
     }
 
     const redirectUri = encodeURIComponent(
-      `${window.location.origin}"
-      }/api/auth/strava/callback`
+      `${window.location.origin}/api/auth/strava/callback`
     );
     const scope = "read,activity:read";
 

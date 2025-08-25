@@ -31,7 +31,7 @@ export default function Page() {
   const [type, setType] = useState<"roast" | "motivate">("roast");
   const [intensity, setIntensity] = useState<number>(1);
   const [result, setResult] = useState<string>();
-  const [language, setLanguage] = useState<Language>("id");
+  const [language, setLanguage] = useState<Language>("en");
   const [isDownloading, setIsDownloading] = useState(false);
 
   const { handleCopy, isCopied } = useCopy();

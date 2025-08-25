@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Provider from "@/components/provider";
 
-export const rebondGrotesque = localFont({
+const rebondGrotesque = localFont({
   src: [
     {
       path: "./rebond-grotesque/ESRebondGrotesqueTRIAL-Regular-BF66189040b697b.otf",

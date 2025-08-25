@@ -19,7 +19,7 @@ export default function Page() {
 
     const redirectUri = encodeURIComponent(
       `${
-        process.env.BASE_URL || "http://localhost:3000"
+        process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
       }/api/auth/strava/callback`
     );
     const scope = "read,activity:read";

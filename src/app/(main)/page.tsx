@@ -18,7 +18,9 @@ export default function Page() {
     }
 
     const redirectUri = encodeURIComponent(
-      "http://localhost:3000/api/auth/strava/callback"
+      `${
+        process.env.BASE_URL || "http://localhost:3000"
+      }/api/auth/strava/callback`
     );
     const scope = "read,activity:read";
 

@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback } from "react";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 export default function Page() {
   const handleConnect = useCallback(() => {
@@ -101,13 +102,55 @@ export default function Page() {
             </button>
           </div>
 
-          <div className=" w-full lg:w-[480px] aspect-[1300/1436] relative">
-            <Image
-              src="/hero.png"
-              fill
-              alt=""
-              className=" object-contain object-center"
-            />
+          <div className=" relative w-fit">
+            <div className=" w-full lg:w-[480px] aspect-[736/919] relative rounded-[40px] overflow-hidden">
+              <Image
+                src="/hero-1.png"
+                fill
+                alt=""
+                className=" object-cover object-center"
+              />
+            </div>
+            <div className="absolute bottom-[-30px] -left-[40px] z-[2] ">
+              <motion.div
+                className="w-[240px] bg-white p-4 rounded-2xl border border-black"
+                animate={{
+                  y: [-10, 10, -10],
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <p>🔥</p>
+                <h1 className=" font-medium text-sm">Roast</h1>
+                <p className=" text-[12px]">
+                  Get brutally honest feedback on your performance. No
+                  sugar-coating, just pure truth served hot.
+                </p>
+              </motion.div>
+            </div>
+            <div className="absolute top-[-60px] -right-[40px] z-[2] ">
+              <motion.div
+                className="w-[240px] bg-white p-4 rounded-2xl border border-black"
+                animate={{
+                  y: [10, -10, 10],
+                }}
+                transition={{
+                  duration: 12,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <p>💪</p>
+                <h1 className=" font-medium text-sm">Motivate</h1>
+                <p className=" text-[12px]">
+                  Turn embarrassment into motivation. Sometimes you need a
+                  wake-up call to level up your game.
+                </p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </Container>

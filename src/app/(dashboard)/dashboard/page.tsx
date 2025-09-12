@@ -215,7 +215,7 @@ export default function Page() {
                   value={value}
                   className=" capitalize px-4 rounded-full text-base"
                 >
-                  {value} {value === "motivate" ? "✊" : "🔥"}
+                  {value} {value === "motivate" ? "💪" : "🔥"}
                 </TabsTrigger>
               ))}
             </TabsList>
